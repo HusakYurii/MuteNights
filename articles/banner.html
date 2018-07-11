@@ -1,0 +1,28 @@
+<div class="banner">
+	<picture>
+  		<source media="(max-width: 500px)" srcset="./img/MuteNightsBannerSmall.png">
+  		<img src="./img/MuteNightsBannerBig.jpg" alt="Mute NIghts">
+	</picture> 
+</div>
+<script>
+$(function(){
+	var $width = $('body').outerWidth() < 611 ? 1 : 0; // <== THIS IS FOR MEDIA QUERY
+		$('.banner').on('click',function(event){
+		
+		event.preventDefault();
+
+		var content = $('#content');
+
+		$('#content').slideUp(700, function(){
+			//use html() to avoid #content's styles to be erased
+			content.html(content.load('./articles/aboutFestival.html', function(){
+
+					//if it is opened  close it
+					if($width) $('.navigation').slideUp(700);
+
+					content.slideDown(700);
+			}));
+		});
+	});
+});
+</script>

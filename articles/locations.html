@@ -1,0 +1,113 @@
+<style>
+	.locations {
+		padding: 50px 0;
+	}
+	.Kiev-location,
+	.Odesa-location {
+	 	display: -ms-flexbox;
+	 	display: -webkit-box;
+	 	display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center; 
+		padding: 50px 0;
+	}
+	.Kiev-location > div,
+	.Odesa-location > div {
+		-ms-flex-preferred-size: 50%;
+		    flex-basis: 50%;
+		padding: 20px;
+	}
+
+	@media screen and (max-width: 500px){
+		.Kiev-location,
+		.Odesa-location {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			-webkit-box-align: stretch;
+			    -ms-flex-align: stretch;
+			        align-items: stretch;
+			padding: 10px 0; 
+		}
+		.Kiev-location > div,
+		.Odesa-location > div {
+			-ms-flex-preferred-size: 100%;
+			    flex-basis: 100%;
+			padding: 10px;
+		}
+	}
+</style>
+
+<div class="locations">
+	<div class="Kiev-location">
+		<div>
+			<p>	
+				<strong>КИЇВ</strong> <br>
+				Довженко-Центр <br>
+				Вул. Васильківська,1 ст.м. Голосіївська <br>
+				pr@dovhenkocentre.org <br>
+			</p>
+		</div>
+		<div id="Kiev-map"></div>
+	</div>
+	<div class="Odesa-location">
+		<div>
+			<p>
+				<strong>ОДЕСА</strong> <br>
+				Зелений театр <br>
+				вул. Маразліївська, 34 <br>
+				ars.od.ua@gmail.com <br>						
+			</p>
+		</div>
+		<div id="Odesa-map"></div>
+	</div>
+	<script>
+		function initMap(){
+			//KIEV LOCATION
+			var kievLocation = {lat: 50.397332, lng: 30.507685};
+			var kievMap = new google.maps.Map(document.getElementById('Kiev-map'), {
+				zoom: 15,
+				center: kievLocation
+			});
+			var marker = new google.maps.Marker({
+				position: kievLocation,
+				map: kievMap
+			});
+			//ODESA LOCATION
+			var odesaLocation = {lat: 46.478470, lng: 30.751022};
+			var odesaMap = new google.maps.Map(document.getElementById('Odesa-map'), {
+				zoom: 15,
+				center: odesaLocation
+			});
+			var marker = new google.maps.Marker({
+				position: odesaLocation,
+				map: odesaMap
+			});
+		}
+		//to be sure that the page is loaded	
+		var t = setTimeout(setHeight, 1000);
+		//change the maps' height when they are loaded on different devices
+		function setHeight() {
+			var kievMap = document.getElementById('Kiev-map');
+			var odesaMap = document.getElementById('Odesa-map');
+			var mapHeight = kievMap.offsetWidth / 1.5;
+
+			kievMap.style.height = mapHeight + 'px';
+			odesaMap.style.height = mapHeight + 'px';
+		}
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgh-iicAvP_xamgihgiE13hOZonzmrQbc&callback=initMap"></script>
+</div>

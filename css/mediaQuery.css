@@ -1,0 +1,128 @@
+/*CHOOSE AND LEAVE @media screen resolution which are NEEDED */ 
+/*@media screen and (max-width: 1024px){}*/
+@media screen and (max-width: 850px){
+	/*===== H E A D E R ===== */
+	.wrapper {
+		margin: 0;
+		padding: 50px 0;
+	}
+	.media > a > i {
+		font-size: 3rem;
+	}
+	.decoration-line {
+		top: calc(50px + 5rem * 0.7);
+	}
+	.wrapper > header,
+	.toggle-button {
+		display: block;
+		top: 50px;
+	}
+	.navigation {
+		display: block;
+		padding-top: 40px;
+		text-align: right;
+		display: none; /*use jQery to show/hide when width>850px*/
+	}
+	.navigation a {
+		padding: 0 15px;
+	}
+	/*===== C O N T E N T ===== */
+	#content {
+		width: 95%;
+		margin: 0 auto;
+		padding: 25px 0;
+	}
+	/*===== F O O T E R ===== */
+	.partners,
+	.contacts {
+		padding: 10px 10px;
+	}
+		/*===== F O O T E R ===== */
+	.partners {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		text-align: center;
+	}
+	.partners > div:first-child {
+	 	-ms-flex-preferred-size: auto;
+	 	    flex-basis: auto; 
+	}	
+	.partners-logo {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+	}
+	.partners-logo > div {
+		-ms-flex-preferred-size: 25%;
+		    flex-basis: 25%;
+	}
+	.partners-logo > div > img {
+		padding: 15px;
+	}
+
+	.contacts {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		text-align: center;
+	}
+	.contacts > div:first-child {
+		-ms-flex-preferred-size: auto;
+		    flex-basis: auto;
+		padding: 10px 0;
+	}
+	.Kiev,
+	.Odesa {
+		padding: 10px;
+	}
+
+}
+
+@media screen and (max-width: 610px){
+	/*===== H E A D E R ===== */
+	.navigation {
+		text-align: center;
+	}
+	.navigation a {
+		font-size: 2rem;
+		padding: 5px 2px;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 500px){
+	/*===== H E A D E R ===== */
+
+	.toggle-button {
+		left: 0;
+		-webkit-transform: translate(0);
+		    -ms-transform: translate(0);
+		        transform: translate(0);
+	}
+	.toggle-button > i {
+		font-size: 3rem;
+	}
+	/*===== C O N T E N T ===== */
+	
+	/*===== F O O T E R ===== */
+	
+	.partners-logo > div {
+		-ms-flex-preferred-size: 40%;
+		    flex-basis: 40%;
+	}
+	.partners-logo > div > img {
+		padding: 10px;
+	}
+	.contacts-info {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
+
+/*@media screen and (max-width: 330px){}*/

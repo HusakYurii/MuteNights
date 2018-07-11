@@ -1,0 +1,272 @@
+
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed:300,700');
+/*'Oswald' eng headers & usual text
+'Roboto Condensed' ru headers & usual text*/
+
+/*========= M A I N =======*/
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    
+}
+
+* {
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0.05rem;
+    margin: 0;
+    padding: 0;
+}
+
+/*======= I M A G E S =======*/
+/*This tag can be redifined*/
+img {
+    width: 100%;
+    height: auto;
+}
+
+/*======= T Y P O G R A P H Y ======= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {white-space: nowrap;
+    font-style: normal;
+    font-weight: bold;
+    font-family: 'Oswald',Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    line-height: 0.7;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 0.9;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.5rem;
+}
+h5 {
+    font-size: 2rem;
+}
+h6 {
+	font-style: 1.8rem;
+}
+p {
+    font-size: 2rem;
+    font-weight: normal;
+}
+span,
+label {
+    font-size: 3rem;
+}
+strong {
+	font-size: 2rem;
+    font-weight: bold;
+}
+a {
+	font-size: 2rem;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+}
+
+/*===== H E A D E R ===== */
+.forIE {
+	display: none; 
+	/*This div is at the bottom of the main page.
+	FOR OLD IE BROWSERS*/
+}
+.wrapper {
+	min-width: 320px;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 100px 0;
+	position: relative;
+	overflow: hidden;
+}
+.media {
+	position: absolute;
+	left: calc(100% - 90px);
+	top: 0;
+}
+.media > a:first-child {
+	color: #668cff;
+}
+.media > a:last-child {
+	color: #ff5c33;
+}
+.decoration-line {
+	position: absolute;
+	width: 100%;
+	border: 2px solid #000;
+	top: calc(100px + 5rem * 0.7);
+}
+.toggle-button {
+	position: absolute;
+	left: 100%;
+	top: 100px;
+	-webkit-transform: translate(-100%);
+	    -ms-transform: translate(-100%);
+	        transform: translate(-100%);
+	display: none;
+	padding: 0 5px;
+}
+.wrapper > header,
+.navigation {
+ 	display: -ms-flexbox;
+ 	display: -webkit-box;
+ 	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+}
+.logo {
+	-ms-flex-preferred-size: 320px;
+	    flex-basis: 320px;
+}
+.logo-ru {
+	padding-left: 50px;
+}
+.logo-en {
+	padding-left: 80px;
+}
+.navigation {
+	-ms-flex-preferred-size: calc(100% - 320px);
+	    flex-basis: calc(100% - 320px);
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap; /*<------*/
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+}
+.navigation a {
+	border-top: 2px solid transparent;
+	-webkit-transition: border-top 0.2s;
+	-o-transition: border-top 0.2s;
+	transition: border-top 0.2s;
+}
+.navigation a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+	border-top: 2px solid #000;
+}
+
+.navigation a:active {
+	border-top: 2px solid #000;
+}
+/*===== C O N T E N T ===== */
+#content {
+	width: 75%;
+	margin: 0 auto;
+	padding: 25px 0;
+}
+.banner {
+	margin: 0 auto;
+}
+/*===== F O O T E R ===== */
+.decoration-line2 {
+	width: 100%;
+	border: 2px solid #000;
+	margin-bottom: 15px;
+
+}
+.partners,
+.partners-logo {
+ 	display: -ms-flexbox;
+ 	display: -webkit-box;
+ 	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+}
+.partners > div:first-child {
+	 -ms-flex-preferred-size: 250px;
+	     flex-basis: 250px;
+	     padding: 0 15px; 
+}
+.partners-logo {
+	-ms-flex-preferred-size: calc(100% - 250px);
+	    flex-basis: calc(100% - 250px);
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	
+}
+.partners-logo > div {
+		-ms-flex-preferred-size: 15%;
+		    flex-basis: 15%;
+	}
+.partners-logo > div > img {
+		padding: 15px;
+}
+.contacts,
+.contacts-info {
+ 	display: -ms-flexbox;
+ 	display: -webkit-box;
+ 	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+}
+.contacts {
+	margin-top: 60px;
+}
+.contacts > div:first-child {
+	-ms-flex-preferred-size: 250px;
+	    flex-basis: 250px;
+	   padding: 0 15px;
+	   text-align: center; 
+}
+.contacts-info {
+	justify-content: space-around;
+	-ms-flex-preferred-size: calc(100% - 250px);
+	    flex-basis: calc(100% - 250px);
+}
+.Kiev,
+.Odesa {
+	padding: 0 10px;
+	-ms-flex-preferred-size: 30%;
+	    flex-basis: 30%;
+}
+
+
