@@ -28,7 +28,7 @@ $(function(){
 	$('.navigation a').on('click',function(event){
 		
 		event.preventDefault();
-		var address = $(this).attr('href') + ".html"; //get a path to the file,
+		var address = "./articles/" + $(this).attr('href') + ".html"; //get a path to the file,
 		var content = $('#content');    	// for ex. <a href="./articles/films.html">
 
 		content.slideUp(700, function(){
