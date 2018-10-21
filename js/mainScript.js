@@ -26,7 +26,7 @@ $(function(){
 	//This one for dynamic changing on the page due to 
 	//loading files the anchors refer to
 	$('.navigation a').on('click',function(event){
-		debugger;
+		
 		event.preventDefault();
 		var address = "./articles/" + $(this).attr('href') + ".html"; //get a path to the file,
 		var content = $('#content');    	// for ex. <a href="./articles/films.html">
